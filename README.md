@@ -17,11 +17,15 @@ google.com/hangouts).
 
 The simplest way to see the request map, is to define a compojure route as
 follows:
-	(GET "/" request (str request))
+```
+(GET "/" request (str request))
+```
 
 This route example shows how to interpret part of the Client's request Uri as
 a parameter (client URL might be "localhost:3000/user/22")
-	(GET "/user/:id" [id] (str "<h1>Hello user " id " </h1>"))
+```
+(GET "/user/:id" [id] (str "<h1>Hello user " id " </h1>"))
+```
 
 ## Further Reading
 Routes info...
