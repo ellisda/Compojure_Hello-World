@@ -8,8 +8,9 @@ GET Query strings, or otherwise receive function arguments from the client.
 
 We can expect to need to parse things like "Genre = Pop" and "BPM > 160"
 
-## Learning Compojure
+The [Getting Started](https://github.com/weavejester/compojure/wiki/Getting-Started) got me up and running with client-server Hello World in 5min
 
+## Learning Compojure
 The server receives the client's request as a clojure map. The Uri can be
 matched against defined Compojure "Routes" to determine what the server should
 reply with (i.e. google.com/photos serves up different content than
@@ -17,11 +18,15 @@ google.com/hangouts).
 
 The simplest way to see the request map, is to define a compojure route as
 follows:
-	(GET "/" request (str request))
+```
+(GET "/" request (str request))
+```
 
 This route example shows how to interpret part of the Client's request Uri as
 a parameter (client URL might be "localhost:3000/user/22")
-	(GET "/user/:id" [id] (str "<h1>Hello user " id " </h1>"))
+```
+(GET "/user/:id" [id] (str "<h1>Hello user " id " </h1>"))
+```
 
 ## Further Reading
 Routes info...
